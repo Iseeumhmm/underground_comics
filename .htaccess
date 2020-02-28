@@ -5,11 +5,11 @@
 # Any changes to the directives between these markers will be overwritten.
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /wc_course/
+RewriteBase /Underground_comics/site/
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /wc_course/index.php [L]
+RewriteRule . /Underground_comics/site/index.php [L]
 </IfModule>
 
 # END WordPress
