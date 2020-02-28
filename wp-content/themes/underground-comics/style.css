@@ -153,6 +153,7 @@ h2 {
   padding-top: 65%;
   margin: 0 auto var(--margin-large);
   border: 1px solid red;
+  z-index: -5;
 }
 .video::after {
     content: "Video";
@@ -235,12 +236,7 @@ h2 {
   width: 100vw;
   padding-top: 40%;
 }
-/* .underground_comics-brands .col-md-6 {
-  padding-top: 40%;
-}
-.underground_comics-brands .col-md-4 {
-  padding-top: 26.7%;
-} */
+
 .underground_comics-brands .dc {
   background: url("img/category_images/dc-category-banner.jpg");
   background-size: cover;
@@ -281,7 +277,7 @@ h2 {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 500px;
+    width: 70%;
 }
 .footer_container .col-md-4 {
     display: block;
@@ -290,7 +286,16 @@ h2 {
     border: 2px solid green;
 }
 
+/* Footer Page.php */
 
+.page-template-default .content-area {
+    position: relative;
+}
+.page-template-default footer {
+    position: absolute;
+    width: 100vw;
+    bottom: 0;
+}
 
 
 /* .footer-menu ul,
