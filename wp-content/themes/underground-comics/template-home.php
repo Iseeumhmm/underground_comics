@@ -22,10 +22,9 @@ get_header();
                     $currency           = get_woocommerce_currency_symbol();
                     $regular            = get_post_meta($feature, '_regular_price', true);
                     $sale               = get_post_meta($feature, '_sale_price', true);
-                    $data = get_post($feature);
-
+                    $post = get_post($feature);
+                    // echo '<pre style="color: white;">' . var_export($data, true) . '</pre>';
                     $discount_percentage = 0;
-                    // echo '<pre>' . var_export($data, true) . '</pre>';
                     if ($showdeal == 1 && (!empty($feature))) :
                         if ($sale > 0 && $regular > 0) {
 
@@ -48,9 +47,8 @@ get_header();
                                             <h1 class="featured-author single_product-author">By: <?php echo $featureAuthor ?></h1>
 
                                             <div class="woocommerce-product-details__short-description">
-
-                                                is an American animated television series by Marvel Animation in cooperation with Film Roman, based on the Marvel Comics superhero team theis an American animated television series by Marvel Animation in cooperation with Film Roman, based on the Marvel Comics superhero team theis an American animated television series by Marvel Animation in cooperation with Film Roman, based on the Marvel Comics superhero team theis an American animated television series by Marvel Animation in cooperation with Film Roman, based on the Marvel Comics superhero team theis an American
-                                            </div>
+                                         <?php echo $post->post_content; ?>
+                                        </div>
                                             <a class="add-to-cart" href="<?php echo esc_url('?add-to-cart=' . $feature) ?>">
                                                 <button name="add-to-cart" value=<?php echo $feature ?> class="featured-button">Add to cart</button>
                                             </a>
@@ -83,9 +81,16 @@ get_header();
 
                     </div>
                     <div class="darkhorse col-md-4 col-12 d-flex">
-                        <img src="<?php echo get_stylesheet_directory_URI(); ?>/img/brand_logos/dark-horse-comics-page-logo.png" alt="Dark Horse Logo" class="img-dc">
+                        <img src="<?php echo get_stylesheet_directory_URI(); ?>/img/brand_logos/dark-horse-comics-logo.png" alt="Dark Horse Logo" class="img-dc">
 
                     </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="collections_container d-flex w-100 align-items-center justify-content-center">
+                    <h1>View our assorded collectibles</h1>
                 </div>
             </div>
         </section>

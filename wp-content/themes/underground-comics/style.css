@@ -131,7 +131,7 @@ h2 {
 /* Banner */
 
 .underground_banner {
-  background: url("img/deadpool-banner.png");
+  background: url("img/banners/deadpool-banner.png");
   position: relative;
   background-size: cover;
   background-position: center top;
@@ -156,11 +156,11 @@ h2 {
   z-index: -5;
 }
 .video::after {
-    content: "Video";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  content: "Video";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .featured {
   width: 100%;
@@ -230,7 +230,6 @@ h2 {
   position: absolute;
   width: 100%;
   height: 100%;
-  color: red;
 }
 .underground_comics-brands .col-12 {
   width: 100vw;
@@ -257,72 +256,226 @@ h2 {
   background: url("img/category_images/dark-horse-category-banner.jpg");
   background-size: cover;
 }
-/* Footer - Footer Menu */
 
-
-.footer_container {
-    width: 80%;
-    height: 300px;
-    /* border: 2px solid var(--blue); */
+/* Collections Container */
+.collections_container {
+  position: relative;
+  background: url(img/banners/assorted-collectibles-category-banner.jpg);
+  background-position: center center;
+  background-size: cover;
+  height: 15rem;
+  margin: var(--margin-large) 0;
 }
-.footer_container .col-12 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 300px;
-    /* border: 2px solid red; */
+.collections_container h1 {
+  font-family: "Downcome";
+  text-transform: uppercase;
+  color: var(--blue);
+  z-index: 10;
+}
+.collections_container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+/* ---------------- Category Page ---------------- */
+
+/* Banner Image */
+
+.category_page-banner .container-fluid {
+  width: 100%;
+  padding-top: 28%;
+  background: url('img/banners/dc-banner.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-bottom: -150px;
+  /* border: 2px solid var(--blue); */
+}
+
+/* Product Category Menu and Icon */
+
+[aria-current] {
+    color: var(--blue);
+}
+.category_page-icon {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  /* border: 2px solid red; */
+}
+.category_page-icon img {
+  position: absolute;
+  width: 100%;
+}
+
+.category_page-menu {
+  /* border: 2px solid red; */
+  height: 100px;
+}
+.category_page-menu ul {
+  padding: 0;
+}
+.category_page-menu li {
+  display: inline-block;
+  list-style: none;
+  padding-right: 1rem;
+}
+.category_page-menu li::after {
+  content: "|";
+  display: inline-block;
+  padding-left: 1rem;
+}
+.category_page-menu li:last-child {
+  padding-right: 0;
+}
+.category_page-menu li:last-child::after {
+  content: "";
+}
+
+.tax-product_cat .woocommerce-products-header h1 {
+  display: none;
+}
+.tax-product_cat .woocommerce-breadcrumb{
+   display: none;
+}
+.tax-product_cat .orderby, .tax-product_cat .woocommerce-result-count{
+  display: none;
+}
+/* Search Bar */
+
+.dgwt-wcas-search-wrapp {
+  max-width: 100% !important;
+  width: 100% !important;
+  margin: 2rem 0 !important;
+}
+.dgwt-wcas-sf-wrapp button.dgwt-wcas-search-submit {
+  height: auto !important;
+  background-color: var(--blue) !important;
+  font-family: 'Downcome' !important;
+  font-weight: bold !important;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+  font-size: var(--sub-heading-size) !important;
+  color: var(--dark-grey) !important;
+}
+.dgwt-wcas-sf-wrapp input[type=search].dgwt-wcas-search-input {
+  height: 55px !important;
+  width: 100% !important;
+  background-color: var(--dark-grey) !important;
+  border: none !important;
+  font-family: 'Montserrat' !important;
+  font-style: normal !important;
+  font-weight: bold !important;
+  color: var(--light-grey);
+  font-size: var(--regular-size) !important;
+}
+.dgwt-wcas-sf-wrapp input[type=search].dgwt-wcas-search-input::placeholder {
+  font-family: 'Montserrat' !important;
+  font-style: normal !important;
+  font-weight: bold !important;
+}
+.dgwt-wcas-close:not(.dgwt-wcas-inner-preloader) {
+  background-image: url('img/close.png') !important;
+  color: var(--light-grey) !important;
+}
+.dgwt-wcas-sf-wrapp .dgwt-wcas-search-submit:before {
+  display: none;
+}
+
+/* Sorting */
+
+.woocommerce .woocommerce-ordering select {
+  color: var(--light-grey);
+}
+
+
+/* ---------------- Category - Items ---------------- */
+
+.items_container .col-12 {
+  padding: 0 !important;
+}
+/* .woocommerce img, .woocommerce-page img {
+  width: 100%;
+} */
+.woocommerce ul.products::before {
+  display: none !important;
+}
+.woocommerce ul.products li.product a img {
+  float: none !important;
+}
+.woocommerce ul.products {
+  display: inline-block !important;
+}
+
+
+/* ---------------- Footer - Footer Menu ---------------- */
+
+.ftr_container {
+  width: 80%;
+  height: 300px;
+  font-size: var(--regular-size);
+  z-index: 20;
+}
+.ftr_container .col-12 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 300px;
+  /* border: 2px solid red; */
+}
+.ftr_container h2 {
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  font-size: var(--regular-size);
+}
+.ftr_container li {
+  list-style: none;
+  padding: 0;
+}
+.ftr_container ul {
+  padding: 0;
 }
 .batman {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 70%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 70%;
+  z-index: 20;
 }
-.footer_container .col-md-4 {
-    display: block;
-    width: 100%;
-    height: auto;
-    border: 2px solid green;
+.ftr_container .col-md-4 {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Instagram */
+.instagram .container-fluid {
+    border: 2px solid var(--blue);
+    height: 300px;
+}
+.instagram .col-12 {
+    border: 2px solid red;
+    height: 300px;
 }
 
 /* Footer Page.php */
 
 .page-template-default .content-area {
-    position: relative;
+  position: relative;
 }
 .page-template-default footer {
-    position: absolute;
-    width: 100vw;
-    bottom: 0;
+  position: absolute;
+  width: 100vw;
+  bottom: 0;
 }
-
-
-/* .footer-menu ul,
-.footer-widgets ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  font-size: 16px;
-}
-
-.footer-menu ul li {
-  display: inline;
-  margin: 0 10px 0 0;
-}
-
-.footer-menu ul li:last-child {
-  margin: 0;
-}
-
-.footer-menu ul li a {
-  color: var(--light-grey);
-  text-decoration: none;
-}
-
-.footer-menu ul li.current-menu-item a {
-  color: #ff9292;
-} */
 
 /* WooCommerce */
 

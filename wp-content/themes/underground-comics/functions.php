@@ -80,6 +80,17 @@ function change_rp_text($translated, $text, $domain)
     return $translated;
 }
 
+// Woo Commerce Category Description Removals
+
+// remove_action('woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_title', 10);
+remove_action('woocommerce_before_shop_loop_item_title', 'woocommerce_show_product_loop_sale_flash', 10);
+remove_action('woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_rating', 5);
+remove_action('woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10);
+remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_product_link_close', 5);
+remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10);
+
+
+
 
 function underground_comic_woocommerce_header_add_to_cart_fragment($fragments)
 {
@@ -105,7 +116,7 @@ function underground_comic_scripts()
     // wp_enqueue_style( 'underground-comics-style', get_stylesheet_uri(), array(), '1.0', 'all' );
     wp_enqueue_script('flexslider-min-js', get_template_directory_uri() . '/inc/flexslider/jquery.flexslider-min.js', array('jquery'), '', true);
     wp_enqueue_style('flexslider-css', get_template_directory_uri() . '/inc/flexslider/flexslider.css', array(), '', 'all');
-    wp_enqueue_script('flexslider-js', get_template_directory_uri() . '/inc/flexslider/flexslider.js', array('jquery'), '', true);
+    wp_enqueue_script('script-js', get_template_directory_uri() . '/inc/script.js', array(), '', true);
 }
 add_action('wp_enqueue_scripts', 'underground_comic_scripts');
 
@@ -113,8 +124,8 @@ function underground_comic_config()
 {
     register_nav_menus(
         array(
-            'underground_comic_main_menu' => 'Underground Comics Main Menu',
-            'underground_comic_footer_menu' => 'Underground Comics Footer Menu'
+            'underground_comic_collections_menu' => 'Underground Comics Collections Menu',
+            'underground_comic_cart_menu' => 'Underground Comics Cart Menu'
         )
     );
     add_theme_support('woocommerce', array(

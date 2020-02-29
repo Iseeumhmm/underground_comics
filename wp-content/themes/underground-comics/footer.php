@@ -10,21 +10,19 @@
 ?>
 
 <footer>
-    <section class="copyright">
-        <div class="container">
+    <section class="instagram">
+        <div class="container-fluid p-0">
             <div class="row">
-                <div class="copyright-text col-12 col-md-6">Copyright</div>
-                <div class="footer-menu col-12 col-md-6 text-left text-md-right">
-                    <?php wp_nav_menu(
-                        array(
-                            'theme_location'      =>  'underground_comics_footer_menu'
-                        )
-                    ); ?>
-                </div>
+                <div class="col-md-2 col-12"></div>
+                <div class="col-md-2 col-12"></div>
+                <div class="col-md-2 col-12"></div>
+                <div class="col-md-2 col-12"></div>
+                <div class="col-md-2 col-12"></div>
+                <div class="col-md-2 col-12"></div>
             </div>
         </div>
     </section>
-    <div class="container-fluid footer_container">
+    <div class="container-fluid ftr_container">
         <div class="row">
             <div class="col-md-5 col-12">
                 <img src="<?php echo get_stylesheet_directory_URI(); ?>/img/batman.png" alt="Batman" class="batman">
@@ -33,34 +31,33 @@
                 <div class="container-fluid p-0">
                     <div class="row">
                         <div class="col-md-4 col-12">
-                            <ul>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                            </ul>
+                            <h2>My Cart</h2>
+                            <?php wp_nav_menu(
+                                array(
+                                    'theme_location'      =>  'underground_comic_collections_menu'
+                                )
+                            ); ?>
                         </div>
                         <div class="col-md-4 col-12">
-                            <ul>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                            </ul>
+                            <h2>Collections</h2>
+                            <?php wp_nav_menu(
+                                array(
+                                    'theme_location'      =>  'underground_comic_cart_menu'
+                                )
+                            ); ?>
                         </div>
                         <div class="col-md-4 col-12">
+                            <h2>Contact</h2>
                             <ul>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
+                                <li>Aylmer, ON Canada</li>
+                                <li style="padding: 1rem;"> </li>
+                                <li>Send an email</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
 </footer>
 </div>
