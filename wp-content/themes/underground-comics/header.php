@@ -23,7 +23,7 @@
     <div id="page" class="site">
         <header>
             <section class="top-bar">
-                <div class="container">
+                <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-6 col-12 text-md-left text-center">
                             <a href="<?php echo home_url('/'); ?>">

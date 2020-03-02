@@ -1,3 +1,4 @@
+<script async src='<?php echo get_stylesheet_directory_URI(); ?>/inc/template-adjustments/related-items.js'></script>
 <?php
 /**
  * The Template for displaying all single products
@@ -37,7 +38,6 @@ get_header( 'shop' ); ?>
 			<?php wc_get_template_part( 'content', 'single-product' ); ?>
 		
 		<?php endwhile; // end of the loop. ?>
-		
 	<?php
 		/**
 		 * woocommerce_after_main_content hook.

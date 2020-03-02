@@ -9,248 +9,65 @@
 
 function underground_comics_customizer($wp_customize)
 {
-    // Copyright Section
+    /*--------------------- Home Page Video -----------------------*/
 
     $wp_customize->add_section(
-        'sec_copyright',
+        'sec_video',
         array(
-            'title'         =>  'Copyright Settings',
-            'description'   =>  'Copyright Section'
+            'title'         =>  'Home Page VIDEO',
+            'description'   =>  'Home Page Video Section'
         )
     );
-    // Field 1 - Copyright Text Box
-    $wp_customize->add_setting(
-        'set_copyright',
-        array(
-            'type'                  =>  'theme_mod',
-            'default'               =>  '',
-            'sanitize_callback'     => 'sanitize_text_field'
-        )
-    );
-    $wp_customize->add_control(
-        'set_copyright',
-        array(
-            'label'         =>  'Copyright',
-            'description'   =>  'Please add your copyright info here.',
-            'section'       =>  'sec_copyright',
-            'type'          =>  'text'
-        )
-    );
-
-    /*--------------------------------------------*/
-    //  Slider Section
-
-    $wp_customize->add_section(
-        'sec_slider',
-        array(
-            'title'         =>  'Slider Settings',
-            'description'   =>  'Slider Section'
-        )
-    );
-    //Loop trough to create slide fields
-    $slides = 3;
-    for ($x = 1; $x <= $slides; $x++) {
 
         // Field - Slider
 
         $wp_customize->add_setting(
-            'set_slider_page' . $x,
+            'set_home_video',
             array(
                 'type'                  =>  'theme_mod',
-                'default'               =>  '',
-                'sanitize_callback'     =>  'absint'
+                'default'               =>  'http://',
+                'sanitize_callback'     =>  'esc_url_raw'
             )
         );
         $wp_customize->add_control(
-            'set_slider_page' . $x,
+            'set_home_video',
             array(
-                'label'         =>  'Set slider page ' . $x,
-                'description'   =>  'Select page ' . $x,
-                'section'       =>  'sec_slider',
-                'type'          =>  'dropdown-pages'
-            )
-        );
-
-        // Field - Slider Button Text
-
-        $wp_customize->add_setting(
-            'set_slider_button_text' . $x,
-            array(
-                'type'                  =>  'theme_mod',
-                'default'               =>  '',
-                'sanitize_callback'     =>  'sanitize_text_field'
-            )
-        );
-        $wp_customize->add_control(
-            'set_slider_button_text' . $x,
-            array(
-                'label'         =>  'Button Text for Page ' . $x,
-                'description'   =>  'Text ' . $x,
-                'section'       =>  'sec_slider',
-                'type'          =>  'text'
-            )
-        );
-
-        // Field - Slider Button URL
-
-        $wp_customize->add_setting(
-            'set_slider_button_url' . $x,
-            array(
-                'type'                  =>  'theme_mod',
-                'default'               =>  '',
-                'sanitize_callback'     =>  'sanitize_text_field'
-            )
-        );
-        $wp_customize->add_control(
-            'set_slider_button_url' . $x,
-            array(
-                'label'         =>  'URL for Page ' . $x,
-                'description'   =>  'URL ' . $x,
-                'section'       =>  'sec_slider',
+                'label'         =>  'Set home page video',
+                'description'   =>  'enter full url ex."http://www.youtube.com/video',
+                'section'       =>  'sec_video',
                 'type'          =>  'url'
             )
         );
-    }
-     /*--------------------------------------------*/
-    //  Home Page Settings
+
+    /*--------------------- Footer Menu Settings -----------------------*/
 
     $wp_customize->add_section(
-        'sec_home_page',
+        'sec_footer',
         array(
-            'title'         =>  'Home Page Product Settings',
-            'description'   =>  'Home Page Section'
+            'title'         =>  'Footer Settings',
+            'description'   =>  'Footer Section'
         )
     );
-        /*--------------------------------------------*/
-        // Max Products
+        // Field 1 - Copyright Text Box
         $wp_customize->add_setting(
-            'set_popular_max_num',
+            'set_footer_email',
             array(
                 'type'                  =>  'theme_mod',
                 'default'               =>  '',
-                'sanitize_callback'     =>  'absint'
+                'sanitize_callback'     => 'sanitize_email'
             )
         );
         $wp_customize->add_control(
-            'set_popular_max_num',
+            'set_footer_email',
             array(
-                'label'         =>  'Popular Products Max Number',
-                'description'   =>  'Enter Number',
-                'section'       =>  'sec_home_page',
-                'type'          =>  'number'
+                'label'         =>  'Email Link in footer menu',
+                'description'   =>  'Please add your email.',
+                'section'       =>  'sec_footer',
+                'type'          =>  'email'
             )
         );
-        // Popular Max Columns
-        $wp_customize->add_setting(
-            'set_popular_max_col',
-            array(
-                'type'                  =>  'theme_mod',
-                'default'               =>  '',
-                'sanitize_callback'     =>  'absint'
-            )
-        );
-        $wp_customize->add_control(
-            'set_popular_max_col',
-            array(
-                'label'         =>  'Popular Products Max Columns',
-                'description'   =>  'Enter Number',
-                'section'       =>  'sec_home_page',
-                'type'          =>  'number'
-            )
-        );
-        /*--------------------------------------------*/
-        // New Arrivals
-        $wp_customize->add_setting(
-            'set_new_arrivals_max_num',
-            array(
-                'type'                  =>  'theme_mod',
-                'default'               =>  '',
-                'sanitize_callback'     =>  'absint'
-            )
-        );
-        $wp_customize->add_control(
-            'set_new_arrivals_max_num',
-            array(
-                'label'         =>  'New Arrivals Max Number',
-                'description'   =>  'Enter Number',
-                'section'       =>  'sec_home_page',
-                'type'          =>  'number'
-            )
-        );
-        // New Arrivals Max Columns
-        $wp_customize->add_setting(
-            'set_new_arrivals_max_col',
-            array(
-                'type'                  =>  'theme_mod',
-                'default'               =>  '',
-                'sanitize_callback'     =>  'absint'
-            )
-        );
-        $wp_customize->add_control(
-            'set_new_arrivals_max_col',
-            array(
-                'label'         =>  'New Arrivals Max Columns',
-                'description'   =>  'Enter Number',
-                'section'       =>  'sec_home_page',
-                'type'          =>  'number'
-            )
-        );
-         /*--------------------------------------------*/
-        // Show Deal
-        $wp_customize->add_setting(
-            'set_show_featured_item',
-            array(
-                'type'                  =>  'theme_mod',
-                'default'               =>  '',
-                'sanitize_callback'     =>  'underground_comics_sanitize_checkbox'
-            )
-        );
-        $wp_customize->add_control(
-            'set_show_featured_item',
-            array(
-                'label'         =>  'Show Featured Item',
-                'description'   =>  '',
-                'section'       =>  'sec_home_page',
-                'type'          =>  'checkbox'
-            )
-        );
-         /*--------------------------------------------*/
-        // Featured Product ID
-        $wp_customize->add_setting(
-            'set_featured',
-            array(
-                'type'                  =>  'theme_mod',
-                'default'               =>  '',
-                'sanitize_callback'     =>  'absint'
-            )
-        );
-        $wp_customize->add_control(
-            'set_featured',
-            array(
-                'label'         =>  'Featured Item',
-                'description'   =>  'Enter Product ID',
-                'section'       =>  'sec_home_page',
-                'type'          =>  'number'
-            )
-        );
-         // Featured Product Author
-         $wp_customize->add_setting(
-            'set_featured_author',
-            array(
-                'type'                  =>  'theme_mod',
-                'default'               =>  '',
-                'sanitize_callback'     =>  'sanitize_text_field'
-            )
-        );
-        $wp_customize->add_control(
-            'set_featured_author',
-            array(
-                'label'         =>  'Featured Item Author',
-                'description'   =>  "Enter the Author's Name",
-                'section'       =>  'sec_home_page',
-                'type'          =>  'text'
-            )
-        );
+
+    
         
 }
 add_action('customize_register', 'underground_comics_customizer');

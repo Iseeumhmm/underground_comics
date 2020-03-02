@@ -58,6 +58,12 @@ h2 {
 }
 
 /* Header - Main Menu */
+.top-bar .container-fluid {
+  width: 85%;
+  margin: auto;
+  padding: 2rem;
+}
+
 .main-menu {
   padding: 0;
 }
@@ -86,6 +92,29 @@ h2 {
 
 .main-menu .navbar-toggler-icon {
   background-image: url("img/hamburger-menu.svg");
+}
+
+@media (max-width: 1345px) {
+  .top-bar .container-fluid {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .top-bar {
+    margin-bottom: 3rem;
+  }
+  .top-bar .container-fluid .row {
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 477px) {
+  .navbar-expand li {
+    font-size: 16px;
+  }
+  .custom-logo-link img {
+    width: 90%;
+    height: 23.2%;
+  }
 }
 
 /* Search Form */
@@ -139,7 +168,7 @@ h2 {
   bottom: 100px;
   width: 100%;
   height: 63vw;
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 /* Video and Featured */
@@ -150,26 +179,22 @@ h2 {
 .video {
   position: relative;
   width: 100%;
-  padding-top: 65%;
+  /* padding-top: 65%; */
   margin: 0 auto var(--margin-large);
-  border: 1px solid red;
   z-index: -5;
 }
-.video::after {
-  content: "Video";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.video .wp-video {
+  width: 100% !important;
+}
+.video [aria-label="Video Player"] {
+  width: 100% !important;
 }
 .featured {
   width: 100%;
   margin: 0 auto var(--margin-large);
 }
 /* Featured Description */
-.featured-desc {
-  padding-left: 3rem;
-}
+
 .featured-desc h2 {
   font-size: var(--heading-size);
   color: var(--blue);
@@ -200,7 +225,28 @@ h2 {
   box-shadow: none;
   text-shadow: none;
 }
-
+@media (max-width: 1199px) {
+  .video_featured {
+    margin-bottom: -200px;
+  }
+}
+@media (max-width: 992px) {
+  .featured-desc {
+    padding-top: 2rem;
+  }
+  .video_featured {
+    margin-bottom: -45vw;
+  }
+  .video_featured .container {
+    max-width: 100% !important;
+    margin: 0;
+  }
+}
+@media (max-width: 767px) {
+  .featured-desc h2 {
+    text-align: center;
+  }
+}
 /* Comic Brands */
 
 .underground_comics-brands {
@@ -257,8 +303,15 @@ h2 {
   background-size: cover;
 }
 
+@media (max-width: 767px) {
+  .underground_comics-brands img {
+    width: 30%;
+  }
+}
+
 /* Collections Container */
 .collections_container {
+  text-align: center;
   position: relative;
   background: url(img/banners/assorted-collectibles-category-banner.jpg);
   background-position: center center;
@@ -291,7 +344,7 @@ h2 {
 .category_page-banner .container-fluid {
   width: 100%;
   padding-top: 28%;
-  background: url('img/banners/dc-banner.jpg');
+  background: url("img/banners/dc-banner.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -302,7 +355,7 @@ h2 {
 /* Product Category Menu and Icon */
 
 [aria-current] {
-    color: var(--blue);
+  color: var(--blue);
 }
 .category_page-icon {
   position: relative;
@@ -342,10 +395,11 @@ h2 {
 .tax-product_cat .woocommerce-products-header h1 {
   display: none;
 }
-.tax-product_cat .woocommerce-breadcrumb{
-   display: none;
+.tax-product_cat .woocommerce-breadcrumb {
+  display: none;
 }
-.tax-product_cat .orderby, .tax-product_cat .woocommerce-result-count{
+.tax-product_cat .orderby,
+.tax-product_cat .woocommerce-result-count {
   display: none;
 }
 /* Search Bar */
@@ -358,31 +412,31 @@ h2 {
 .dgwt-wcas-sf-wrapp button.dgwt-wcas-search-submit {
   height: auto !important;
   background-color: var(--blue) !important;
-  font-family: 'Downcome' !important;
+  font-family: "Downcome" !important;
   font-weight: bold !important;
   padding-left: 2rem !important;
   padding-right: 2rem !important;
   font-size: var(--sub-heading-size) !important;
   color: var(--dark-grey) !important;
 }
-.dgwt-wcas-sf-wrapp input[type=search].dgwt-wcas-search-input {
+.dgwt-wcas-sf-wrapp input[type="search"].dgwt-wcas-search-input {
   height: 55px !important;
   width: 100% !important;
   background-color: var(--dark-grey) !important;
   border: none !important;
-  font-family: 'Montserrat' !important;
+  font-family: "Montserrat" !important;
   font-style: normal !important;
   font-weight: bold !important;
   color: var(--light-grey);
   font-size: var(--regular-size) !important;
 }
-.dgwt-wcas-sf-wrapp input[type=search].dgwt-wcas-search-input::placeholder {
-  font-family: 'Montserrat' !important;
+.dgwt-wcas-sf-wrapp input[type="search"].dgwt-wcas-search-input::placeholder {
+  font-family: "Montserrat" !important;
   font-style: normal !important;
   font-weight: bold !important;
 }
 .dgwt-wcas-close:not(.dgwt-wcas-inner-preloader) {
-  background-image: url('img/close.png') !important;
+  background-image: url("img/close.png") !important;
   color: var(--light-grey) !important;
 }
 .dgwt-wcas-sf-wrapp .dgwt-wcas-search-submit:before {
@@ -394,7 +448,6 @@ h2 {
 .woocommerce .woocommerce-ordering select {
   color: var(--light-grey);
 }
-
 
 /* ---------------- Category - Items ---------------- */
 
@@ -413,7 +466,6 @@ h2 {
 .woocommerce ul.products {
   display: inline-block !important;
 }
-
 
 /* ---------------- Footer - Footer Menu ---------------- */
 
@@ -450,20 +502,37 @@ h2 {
   width: 70%;
   z-index: 20;
 }
-.ftr_container .col-md-4 {
+.ftr_container .col-lg-4 {
   display: block;
   width: 100%;
   height: auto;
 }
-
+@media (max-width: 992px) {
+  .ftr_container .row {
+    flex-direction: column-reverse;
+  }
+  .ftr_container .col-12 {
+    height: auto;
+  }
+  .ftr_container .col-lg-7.col-12 {
+    text-align: center;
+  }
+  .ftr_container .col-lg-4.col-12 {
+    padding: 2rem 0;
+  }
+  .batman {
+    position: relative;
+    width: 80%;
+  }
+}
 /* Instagram */
 .instagram .container-fluid {
-    border: 2px solid var(--blue);
-    height: 300px;
+  border: 2px solid var(--blue);
+  height: 300px;
 }
 .instagram .col-12 {
-    border: 2px solid red;
-    height: 300px;
+  border: 2px solid red;
+  height: 300px;
 }
 
 /* Footer Page.php */
@@ -633,11 +702,14 @@ button.wc-forward,
 .woocommerce .woocommerce-breadcrumb {
   color: var(--blue);
 }
-
+.related.products h2 {
+  padding-bottom: 2rem;
+  font-size: var(--sub-heading-size);
+}
 /* Description Container */
 
 .summary.entry-summary {
-  min-height: 600px;
+  min-height: 800px;
 }
 
 /* Heading */
