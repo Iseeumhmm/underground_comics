@@ -114,8 +114,7 @@ function underground_comic_scripts()
 
     //Flex Slider Javascript and CSS
     // wp_enqueue_style( 'underground-comics-style', get_stylesheet_uri(), array(), '1.0', 'all' );
-    wp_enqueue_script('flexslider-min-js', get_template_directory_uri() . '/inc/flexslider/jquery.flexslider-min.js', array('jquery'), '', true);
-    wp_enqueue_style('flexslider-css', get_template_directory_uri() . '/inc/flexslider/flexslider.css', array(), '', 'all');
+
     wp_enqueue_script('script-js', get_template_directory_uri() . '/inc/script.js', array(), '', true);
 }
 add_action('wp_enqueue_scripts', 'underground_comic_scripts');

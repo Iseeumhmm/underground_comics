@@ -71,8 +71,6 @@ h2 {
 .main-menu ul {
   padding: 0;
   margin: 0;
-  font-size: 18px;
-  font-weight: 500;
   border-radius: 0;
 }
 
@@ -375,7 +373,7 @@ h2 {
 .category_page-menu ul {
   padding: 0;
 }
-.category_page-menu li {
+.category_page-menu li, .navbar-nav .nav-link {
   display: inline-block;
   list-style: none;
   padding-right: 1rem;
@@ -466,7 +464,61 @@ h2 {
 .woocommerce ul.products {
   display: inline-block !important;
 }
-
+@media( max-width: 992px ) {
+  .category_page-icon img {
+    bottom: 0;
+  }
+ .main-menu.navbar.navbar-expand-lg {
+   background-color: var(--dark-grey);
+   opacity: 1;
+   z-index: 25;
+   /* width: 300px; */
+ }
+ .navbar-toggler:focus {
+   outline: none !important;
+ }
+ .main-menu ul li {
+   z-index: 50;
+   margin-right: 0 !important;
+   padding-right: 0 !important;
+   padding-left: 1rem;
+ }
+  /* .category_page-menu {
+    padding: 0 !important;
+    justify-content: center !important;
+  }
+  .category_page-menu li a {
+    font-size: 16px;
+  }
+  .category_page-menu li {
+    display: inline-block;
+    list-style: none;
+    padding-right: .25rem;
+  } */
+  .category_page-menu li::after {
+    content: none;
+  }
+  /* .category_page-menu li:last-child {
+    padding-right: 0;
+  } */
+}
+@media( max-width: 767px ) {
+  .category_page-icon img {
+    width: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 2rem;
+  }
+  .category_page-menu {
+    height: auto;
+  }
+  .category_page-menu.d-flex {
+    display: block !important;
+  }
+  .navbar-toggler.ml-auto {
+    margin-left: 0 !important;
+  }
+}
 /* ---------------- Footer - Footer Menu ---------------- */
 
 .ftr_container {
@@ -537,10 +589,16 @@ h2 {
 
 /* Footer Page.php */
 
-.page-template-default .content-area {
+.page:has(.customize-support) {
   position: relative;
+  padding-bottom: 30rem;
 }
-.page-template-default footer {
+
+/* .page-template-default .content-area, .page.customize-support .content-area {
+  position: relative;
+  padding-bottom: 30rem;
+} */
+.page-template-default .content-area footer, .customize-support .content-area footer {
   position: absolute;
   width: 100vw;
   bottom: 0;

@@ -31,7 +31,7 @@
                 <div class="container-fluid p-0">
                     <div class="row">
                         <div class="col-lg-4 col-12">
-                            <h2>My Cart</h2>
+                            <h2>Collections</h2>
                             <?php wp_nav_menu(
                                 array(
                                     'theme_location' =>  'underground_comic_collections_menu'
@@ -39,7 +39,7 @@
                             ); ?>
                         </div>
                         <div class="col-lg-4 col-12">
-                            <h2>Collections</h2>
+                            <h2>My Cart</h2>
                             <?php wp_nav_menu(
                                 array(
                                     'theme_location' =>  'underground_comic_cart_menu'

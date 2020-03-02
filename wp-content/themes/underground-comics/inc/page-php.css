@@ -1,0 +1,11 @@
+/* Footer Page.php */
+
+.page {
+    position: relative;
+    padding-bottom: 30rem;
+  }
+  footer {
+    position: absolute;
+    width: 100vw;
+    bottom: 0;
+  }

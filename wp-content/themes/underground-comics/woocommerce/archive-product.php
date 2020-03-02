@@ -41,11 +41,27 @@ get_header('shop');
                 ?>
             </div>
             <div class="category_page-menu col-md-9 col-12 d-flex align-items-start justify-content-end">
-                <?php wp_nav_menu(
-                    array(
-                        'theme_location'      =>  'underground_comic_collections_menu'
-                    )
-                ); ?>
+                <nav class="main-menu navbar navbar-expand-lg" role="navigation">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbar-collapse-1" aria-controls="navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <?php
+
+                    wp_nav_menu(
+                        array(
+                            'theme_location' =>  'underground_comic_collections_menu',
+                            'depth' => 3,
+                            'container' => 'div',
+                            'container_class' => 'collapse navbar-collapse',
+                            'container_id' => 'navbar-collapse-1',
+                            'menu_class' => 'nav navbar-nav',
+                            'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
+                            'walker' => new WP_Bootstrap_Navwalker(),
+                        )
+                    );
+                    ?>
+                </nav>
             </div>
         </div>
     </div>
