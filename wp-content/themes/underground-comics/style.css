@@ -95,9 +95,14 @@ h2 {
 @media (max-width: 1345px) {
   .top-bar .container-fluid {
     width: 100%;
+    padding: 1rem;
   }
 }
 @media (max-width: 767px) {
+  .navbar-expand.ml-auto.mr-1 {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
   .top-bar {
     margin-bottom: 3rem;
   }
@@ -168,7 +173,11 @@ h2 {
   height: 63vw;
   /* z-index: -1; */
 }
-
+@media(max-width: 1135px){
+  .underground_banner {
+    bottom: 67px;
+  }
+}
 /* Video and Featured */
 
 .video_featured {
@@ -226,6 +235,7 @@ h2 {
 @media (max-width: 1199px) {
   .video_featured {
     margin-bottom: -200px;
+    margin-top: -8vh;
   }
 }
 @media (max-width: 992px) {
@@ -587,22 +597,7 @@ h2 {
   height: 300px;
 }
 
-/* Footer Page.php */
 
-.page:has(.customize-support) {
-  position: relative;
-  padding-bottom: 30rem;
-}
-
-/* .page-template-default .content-area, .page.customize-support .content-area {
-  position: relative;
-  padding-bottom: 30rem;
-} */
-.page-template-default .content-area footer, .customize-support .content-area footer {
-  position: absolute;
-  width: 100vw;
-  bottom: 0;
-}
 
 /* WooCommerce */
 

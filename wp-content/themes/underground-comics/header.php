@@ -35,7 +35,7 @@
                                 <?php endif; ?>
                             </a>
                         </div>
-                        <div class="col-md-6 col-12 text-md-right">
+                        <div class="col-md-6 col-12 text-md-right text-center">
                             <div class="d-flex">
                                 <div class="navbar-expand ml-auto mr-1">
                                     <ul class="navbar-nav">
