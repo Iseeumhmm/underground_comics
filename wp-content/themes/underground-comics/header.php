@@ -35,9 +35,38 @@
                                 <?php endif; ?>
                             </a>
                         </div>
-                        <div class="col-md-6 col-12 text-md-right text-center">
-                            <div class="d-flex">
-                                <div class="navbar-expand ml-auto mr-1">
+                        <div class="col-md-6 col-12 text-right">
+                            <div class="d-flex justify-content-md-end justify-content-center align-items-center mt-3 mt-md-0">
+                                <div class="cart text-right d-flex align-items-center">
+                                    <a href="<?php echo wc_get_cart_url(); ?>"><span class="cart-icon"></span></a>
+                                    <span class="items"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
+                                </div>
+
+                                <nav class="main-menu navbar navbar-expand-lg ml-3" role="navigation">
+                                    <!-- Brand and toggle get grouped for better mobile display -->
+                                    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbar-collapse-main" aria-controls="navbar-collapse-main" aria-expanded="false" aria-label="Toggle navigation">
+                                        <span class="navbar-toggler-icon"></span>
+                                    </button>
+                                    <div id="navbar-collapse-main" class="collapse navbar-collapse">
+                                        <ul id="menu-collections" class="nav navbar-nav">
+                                            <?php if (is_user_logged_in()) : ?>
+                                                <li>
+                                                    <a href="<?php echo esc_url(get_permalink(get_option('woocommerce_myaccount_page_id'))) ?>" class="nav-link">My Account</a>
+                                                </li>
+                                                <li>
+                                                    <a href="<?php echo esc_url(wp_logout_url(get_permalink(get_option('woocommerce_myaccount_page_id')))) ?>" class="nav-link">Log Out</a>
+                                                </li>
+                                            <?php else : ?>
+                                                <li>
+                                                    <a href="<?php echo esc_url(get_permalink(get_option('woocommerce_myaccount_page_id'))) ?>" class="nav-link">Login / Register</a>
+                                                </li>
+                                            <?php endif; ?>
+                                        </ul>
+                                    </div>
+                                </nav>
+
+
+                                <!-- <div class="navbar-expand ml-auto mr-1">
                                     <ul class="navbar-nav">
                                         <?php if (is_user_logged_in()) : ?>
                                             <li>
@@ -52,11 +81,8 @@
                                             </li>
                                         <?php endif; ?>
                                     </ul>
-                                </div>
-                                <div class="cart text-right d-flex align-items-center">
-                                    <a href="<?php echo wc_get_cart_url(); ?>"><span class="cart-icon"></span></a>
-                                    <span class="items"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
-                                </div>
+                                </div> -->
+
                             </div>
                         </div>
                     </div>
