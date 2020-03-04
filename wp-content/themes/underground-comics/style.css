@@ -183,6 +183,10 @@ h2 {
 }
 /* Video and Featured */
 
+.featured-desc {
+  padding-left: 4rem !important;
+}
+
 .video_featured {
   margin-top: -250px;
 }
@@ -203,6 +207,12 @@ h2 {
   width: 100%;
   margin: 0 auto var(--margin-large);
 }
+
+/* Featured Image */
+.featured-img img {
+  box-shadow: 0 0 2rem black;
+}
+
 /* Featured Description */
 
 .featured-desc h2 {
@@ -237,7 +247,7 @@ h2 {
 }
 @media (max-width: 1199px) {
   .video_featured {
-    margin-bottom: -200px;
+    /* margin-bottom: -200px; */
     margin-top: -8vh;
   }
 }
@@ -246,7 +256,7 @@ h2 {
     padding-top: 2rem;
   }
   .video_featured {
-    margin-bottom: -45vw;
+    /* margin-bottom: -45vw; */
   }
   .video_featured .container {
     max-width: 100% !important;
@@ -254,8 +264,18 @@ h2 {
   }
 }
 @media (max-width: 767px) {
+  .featured-desc {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
   .featured-desc h2 {
     text-align: center;
+  }
+  .featured-desc h1 {
+    font-size: var(--sub-heading-size);
+  }
+  .video_featured {
+    /* margin-bottom: -25vw; */
   }
 }
 /* Comic Brands */
@@ -349,12 +369,6 @@ h2 {
 }
 
 /* ---------------- Category Page ---------------- */
-
-/* Remove sidebar all pages */
-
-/* .sidebar-shop {
-  display: none !important;
-} */
 
 /* Banner Image */
 
@@ -772,6 +786,9 @@ button.wc-forward,
 
 .summary.entry-summary {
   min-height: 800px;
+}
+.home .summary.entry-summary {
+  min-height: auto;
 }
 
 /* Heading */
