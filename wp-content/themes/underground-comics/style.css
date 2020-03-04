@@ -488,7 +488,10 @@ h2 {
   padding-left: 15px !important;
   padding-right: 15px !important;
 } */
-
+.woocommerce img,
+  .woocommerce-page img {
+    padding: 5px;
+  }
 .items_container .col-12 {
   padding: 0 !important;
 }
