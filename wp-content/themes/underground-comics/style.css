@@ -550,7 +550,7 @@ h2 {
     width: 30%;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 2rem;
+    top: 5rem;
   }
   .category_page-menu {
     height: auto;
