@@ -80,6 +80,10 @@ function change_rp_text($translated, $text, $domain)
     return $translated;
 }
 
+// Remove Sidebar
+remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10); 
+
+
 // Woo Commerce Category Description Removals
 
 // remove_action('woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_title', 10);
@@ -144,8 +148,8 @@ function underground_comic_config()
     add_theme_support('wc-product-gallery-slider');
 
     add_theme_support('custom-logo', array(
-        'height'        =>  103,
-        'width'         =>  400,
+        'height'        =>  117,
+        'width'         =>  492,
         'flex_height'   =>  true,
         'flex_width'    =>  true
     ));

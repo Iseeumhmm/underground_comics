@@ -35,10 +35,12 @@ paragraph: montserrat regular, 21px, light grey
 
 buttons: montserrat bold, 24px, black, blue background, dark grey background on hover */
 
-@font-face {
-  font-family: "Downcome";
-  src: url("inc/downcome.ttf");
-  font-weight: normal;
+
+
+@font-face{ 
+	font-family: 'Downcome';
+	src: url('inc/downcome-webfont.woff') format('woff'),
+	     url('inc/downcome.ttf') format('truetype');
 }
 
 body {
@@ -51,6 +53,7 @@ body {
 a,
 a:hover {
   color: var(--light-grey);
+  text-decoration: none;
 }
 h2 {
   font-family: "Downcome";
@@ -346,6 +349,12 @@ h2 {
 }
 
 /* ---------------- Category Page ---------------- */
+
+/* Remove sidebar all pages */
+
+/* .sidebar-shop {
+  display: none !important;
+} */
 
 /* Banner Image */
 
@@ -797,6 +806,10 @@ button.wc-forward,
 /* Button */
 .woocommerce div.product form.cart .button {
   font-size: var(--button-size);
+}
+
+.tax-product_cat .content-area  {
+  width: 100%;
 }
 
 /* Related Products Title */
