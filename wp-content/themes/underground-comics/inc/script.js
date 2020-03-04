@@ -1,3 +1,7 @@
-document.addEventListener('DOMContentLoaded', function(event) {
-   
-  })
+// document.addEventListener('DOMContentLoaded', function(event) {
+    
+//   })
+
+function goToProduct( link ) {
+  window.location = link;
+}

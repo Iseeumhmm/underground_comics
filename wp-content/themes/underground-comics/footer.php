@@ -10,27 +10,21 @@
 ?>
 
 <footer>
-    <!-- <section class="instagram">
+    <section class="instagram">
         <div class="container-fluid p-0">
-            <div class="row">
-                <div class="col-md-2 col-12"></div>
-                <div class="col-md-2 col-12"></div>
-                <div class="col-md-2 col-12"></div>
-                <div class="col-md-2 col-12"></div>
-                <div class="col-md-2 col-12"></div>
-                <div class="col-md-2 col-12"></div>
-            </div>
+            <!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/90ebc066df105ae68e1dc7579154403c.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+
         </div>
-    </section> -->
+    </section>
     <div class="container-fluid ftr_container">
         <div class="row">
-            <div class="col-lg-5 col-12">
+            <div class="col-xl-5 col-12">
                 <img src="<?php echo get_stylesheet_directory_URI(); ?>/img/batman.png" alt="Batman" class="batman">
             </div>
-            <div class="col-lg-7 col-12">
+            <div class="col-xl-7 col-12">
                 <div class="container-fluid p-0">
                     <div class="row">
-                        <div class="col-lg-4 col-12">
+                        <div class="col-xl-4 col-12">
                             <h2>Collections</h2>
                             <?php wp_nav_menu(
                                 array(
@@ -38,7 +32,7 @@
                                 )
                             ); ?>
                         </div>
-                        <div class="col-lg-4 col-12">
+                        <div class="col-xl-4 col-12">
                             <h2>My Cart</h2>
                             <?php wp_nav_menu(
                                 array(
@@ -46,7 +40,7 @@
                                 )
                             ); ?>
                         </div>
-                        <div class="col-lg-4 col-12">
+                        <div class="col-xl-4 col-12">
                             <?php $email = get_theme_mod('set_footer_email', ''); ?>
                             <h2>Contact</h2>
                             <ul>

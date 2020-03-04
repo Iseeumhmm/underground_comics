@@ -39,26 +39,27 @@ get_header();
 
                         <section class="Featured">
                             <div class="container">
-                                <div class="row d-flex">
-                                    <div class="featured-img col-lg-6 col-12 p-0 ml-auto text-center">
-                                        <?php echo get_the_post_thumbnail($feature, 'large', array('class' => 'img-fluid')); ?>
-                                    </div>
-                                    <div class="featured-desc col-lg-6 col-12">
-                                        <h2>Featured</h2>
-                                        <div class="summary entry-summary">
-                                            <a href="<?php echo get_permalink($feature); ?>">
-                                                <h1 class="product_title entry-title"><?php echo get_the_title($feature); ?></h1>
-                                            </a>
-                                            <h1 class="featured-author single_product-author">By: <?php echo $featureAuthor ?></h1>
-
-                                            <div class="woocommerce-product-details__short-description">
-                                                <?php echo $post->post_content; ?>
-                                            </div>
-                                            <a class="add-to-cart" href="<?php echo esc_url('?add-to-cart=' . $feature) ?>">
-                                                <button name="add-to-cart" value=<?php echo $feature ?> class="featured-button">Add to cart</button>
-                                            </a>
+                                <div class="row d-flex" onClick="goToProduct('<?php echo get_permalink($feature); ?>');">
+                                        <div class="featured-img col-lg-6 col-12 p-0 ml-auto text-center">
+                                            <?php echo get_the_post_thumbnail($feature, 'large', array('class' => 'img-fluid')); ?>
                                         </div>
-                                    </div>
+                                        <div class="featured-desc col-lg-6 col-12">
+                                            <h2>Featured</h2>
+                                            <div class="summary entry-summary">
+                                                <a href="<?php echo get_permalink($feature); ?>">
+                                                    <h1 class="product_title entry-title"><?php echo get_the_title($feature); ?></h1>
+                                                </a>
+                                                <h1 class="featured-author single_product-author">By: <?php echo $featureAuthor ?></h1>
+
+                                                <div class="woocommerce-product-details__short-description">
+                                                    <?php echo $post->post_content; ?>
+                                                </div>
+                                                <a class="add-to-cart" href="<?php echo esc_url('?add-to-cart=' . $feature) ?>">
+                                                    <button name="add-to-cart" value=<?php echo $feature ?> class="featured-button">Add to cart</button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
                         </section>
                     <?php endif; ?>
