@@ -27,7 +27,6 @@ if (empty($product) || !$product->is_visible()) {
 ?>
 
 <div class="col-md-3 col-6 p-0">
-
     <div <?php wc_product_class('', $product); ?>>
         <?php
         /**

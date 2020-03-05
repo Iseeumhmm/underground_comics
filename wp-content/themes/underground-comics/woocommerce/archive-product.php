@@ -20,8 +20,39 @@ defined('ABSPATH') || exit;
 
 get_header('shop');
 ?>
+<?php
+if (is_product_category()) {
+    global $wp_query;
+    $cat = $wp_query->get_queried_object();
+
+    $thumbnail_id = get_term_meta($cat->term_id, 'thumbnail_id', true);
+    $image = wp_get_attachment_url($thumbnail_id);
+    $category = $cat->slug;
+    $page = "";
+    switch ($category) {
+        case "marvel":
+            $page = get_stylesheet_directory_uri() . "/img/banners/marvel-banner.jpg";
+            break;
+        case "valiant":
+            $page = get_stylesheet_directory_uri() . "/img/banners/valiant-banner.jpg";
+            break;
+        case "image":
+            $page = get_stylesheet_directory_uri() . "/img/banners/image-banner.jpg";
+            break;
+        case "dark-horse":
+            $page = get_stylesheet_directory_uri() . "/img/banners/dark-horse-banner.jpg";
+            break;
+        case "dc":
+            $page = get_stylesheet_directory_uri() . "/img/banners/dc-banner.jpg";
+            break;
+        case "assorted":
+            $page = get_stylesheet_directory_uri() . "/img/banners/assorted-collectibles-banner.jpg";
+            break;
+    }
+}
+?>
 <section class="category_page-banner">
-    <div class="container-fluid">
+    <div class="container-fluid" style="background-image: url('<?php echo $page; ?>');">
         <div id="category_page-banner--image"></div>
     </div>
 </section>
@@ -31,10 +62,6 @@ get_header('shop');
             <div class="category_page-icon col-md-3 col-12 p-0">
                 <?php
                 if (is_product_category()) {
-                    global $wp_query;
-                    $cat = $wp_query->get_queried_object();
-                    $thumbnail_id = get_term_meta($cat->term_id, 'thumbnail_id', true);
-                    $image = wp_get_attachment_url($thumbnail_id);
 
                     echo "<img src='{$image}' alt='Brand Logo'>";
                 }

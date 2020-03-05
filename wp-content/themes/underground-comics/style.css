@@ -293,7 +293,7 @@ h2 {
   transform: translate(-50%, -50%);
   z-index: 10;
 }
-.underground_comics-brands::after {
+.underground_comics-brands .col-12::after {
   content: "";
   position: absolute;
   top: 0;
@@ -303,6 +303,12 @@ h2 {
   background-color: #000000;
   opacity: 0.8;
   z-index: 1;
+}
+.underground_comics-brands .col-12:hover::after {
+  opacity: 0;
+}
+.underground_comics-brands .col-12:hover img {
+  transform: translate(-50%, -50%) scale(1.3);
 }
 .underground_comics-brands .overlay {
   position: absolute;
