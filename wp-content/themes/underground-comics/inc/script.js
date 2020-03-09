@@ -17,19 +17,17 @@ document.addEventListener('DOMContentLoaded', function (event) {
     let link = document.querySelector('.add-to-cart');
     let addToCartSinglePage = document.querySelector('.single_add_to_cart_button.button');
 
-    if ( link ) { 
-      let button = link.querySelector('button'); 
+    if (link) {
+      let button = link.querySelector('button');
       button.innerHTML = "More Info";
-    } else if ( addToCartSinglePage ) {
-      addToCartSinglePage.setAttribute( 'style', 'display: none;' );
+    } else if (addToCartSinglePage) {
+      addToCartSinglePage.setAttribute('style', 'display: none;');
     }
     console.log('Cart disabled');
     if (!substituteCartLink) {
       let linkToFeatured = document.querySelectorAll('.entry-summary a');
-      console.log('link: ', linkToFeatured[0].href); 
-      link.setAttribute( 'href', linkToFeatured[0].href );
-    } else {
-
+      console.log('link: ', linkToFeatured[0].href);
+      link.setAttribute('href', linkToFeatured[0].href);
     }
 
   }

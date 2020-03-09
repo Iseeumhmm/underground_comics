@@ -53,7 +53,7 @@
                                     if (is_front_page() != true ) :
                                     ?>
                                         <div class="substitute_cart">
-                                            <a id="substitute-cart-link" href="mailto:<?php echo $email; ?>">Contact for more info</a>
+                                            <a id="substitute-cart-link" href="mailto:<?php echo $email; ?>">Contact For More Info</a>
                                         </div>
                                 <?php
                                     endif;
