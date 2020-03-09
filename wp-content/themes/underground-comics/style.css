@@ -342,35 +342,35 @@ h2 {
 }
 
 .dc_logo {
-  background: url("img/brand_logos/dc-comics-logo.png");
+  background: url("img/brand_logos_page/dc-comics-page-logo.png");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 40px 40px;
 }
 .marvel_logo {
-  background: url("img/brand_logos/marvel-comics-logo.png");
+  background: url("img/brand_logos_page/marvel-comics-page-logo.png");
   background-size: contain !important;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 40px 40px;
 }
 .valiant_logo {
-  background: url("img/brand_logos/valiant-comics-logo.png");
+  background: url("img/brand_logos_page/valiant-comics-page-logo.png");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 40px 40px;
 }
 .image_logo {
-  background: url("img/brand_logos/image-comics-logo.png");
+  background: url("img/brand_logos_page/image-comics-page-logo.png");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 40px 40px;
 }
 .darkhorse_logo {
-  background: url("img/brand_logos/dark-horse-comics-logo.png");
+  background: url("img/brand_logos_page/dark-horse-comics-page-logo.png");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
