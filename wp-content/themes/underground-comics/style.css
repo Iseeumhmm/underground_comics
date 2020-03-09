@@ -434,7 +434,9 @@ h2 {
 }
 
 /* Product Category Menu and Icon */
-
+.products h2 {
+  color: var(--blue);
+}
 [aria-current] {
   color: var(--blue);
 }
@@ -553,7 +555,7 @@ h2 {
   padding: 0 !important;
 }
 /* .woocommerce img, .woocommerce-page img {
-  width: 100%;
+  max-width: unset;
 } */
 .woocommerce ul.products::before {
   display: none !important;

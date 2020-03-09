@@ -12,6 +12,8 @@ require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
 // 
 require_once get_template_directory() . '/inc/customizer.php';
 
+
+
 /**
  * Show cart contents / total Ajax
  */
@@ -162,7 +164,7 @@ function underground_comic_config()
     }
 }
 add_action('after_setup_theme', 'underground_comic_config', 0);
-
+// remove_filter ('the_content', 'wpautop');
 // Import file that contains WooCommerce Modifications
 if (class_exists('WooCommerce')) {
     require get_template_directory() . '/inc/wc-modifications.php';
