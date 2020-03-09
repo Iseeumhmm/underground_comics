@@ -343,7 +343,7 @@ h2 {
 
 .dc_logo {
   background: url("img/brand_logos_page/dc-comics-page-logo.png");
-  background-size: cover;
+  background-size: contain !important;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 40px 40px;
@@ -357,28 +357,28 @@ h2 {
 }
 .valiant_logo {
   background: url("img/brand_logos_page/valiant-comics-page-logo.png");
-  background-size: cover;
+  background-size: contain !important;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 40px 40px;
 }
 .image_logo {
   background: url("img/brand_logos_page/image-comics-page-logo.png");
-  background-size: cover;
+  background-size: contain !important;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 40px 40px;
 }
 .darkhorse_logo {
   background: url("img/brand_logos_page/dark-horse-comics-page-logo.png");
-  background-size: cover;
+  background-size: contain !important;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 40px 40px;
 }
 .assorted_logo {
   background: url("img/brand_logos/assorted-collectibles-page-logo.jpg");
-  background-size: cover;
+  background-size: contain !important;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 40px 40px;
