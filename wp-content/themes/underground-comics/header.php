@@ -37,11 +37,29 @@
                         </div>
                         <div class="col-md-6 col-12 text-right">
                             <div class="d-flex justify-content-md-end justify-content-center align-items-center mt-3 mt-md-0">
-                                <div class="cart text-right d-flex align-items-center">
-                                    <a href="<?php echo wc_get_cart_url(); ?>"><span class="cart-icon"></span></a>
-                                    <span class="items"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
-                                </div>
 
+                                <?php
+                                $displayCart = get_theme_mod('set_cart', false);
+                                $email = get_theme_mod('set_footer_email', '');
+                                if ($displayCart == true) :
+                                ?>
+                                    <div class="cart text-right d-flex align-items-center">
+                                        <a id="cart-icon" href="<?php echo wc_get_cart_url(); ?>"><span class="cart-icon"></span></a>
+                                        <span class="items"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
+                                    </div>
+
+                                    <?php
+                                else :
+                                    if (is_front_page() != true ) :
+                                    ?>
+                                        <div class="substitute_cart">
+                                            <a id="substitute-cart-link" href="mailto:<?php echo $email; ?>">Contact for more info</a>
+                                        </div>
+                                <?php
+                                    endif;
+                                endif;
+
+                                ?>
                                 <nav class="main-menu navbar navbar-expand-lg ml-3" role="navigation">
                                     <!-- Brand and toggle get grouped for better mobile display -->
                                     <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbar-collapse-main" aria-controls="navbar-collapse-main" aria-expanded="false" aria-label="Toggle navigation">
