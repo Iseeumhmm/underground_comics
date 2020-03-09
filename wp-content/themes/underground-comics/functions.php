@@ -128,7 +128,8 @@ function underground_comic_config()
     register_nav_menus(
         array(
             'underground_comic_collections_menu' => 'Underground Comics Collections Menu',
-            'underground_comic_cart_menu' => 'Underground Comics Cart Menu'
+            'underground_comic_cart_menu' => 'Underground Comics Cart Menu',
+            'under_ground_comics_footer_menu' => 'Under Ground Comics Footer Menu',
         )
     );
     add_theme_support('woocommerce', array(

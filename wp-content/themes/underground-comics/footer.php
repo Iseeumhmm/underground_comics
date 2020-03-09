@@ -28,7 +28,7 @@
                             <h2>Collections</h2>
                             <?php wp_nav_menu(
                                 array(
-                                    'theme_location' =>  'underground_comic_collections_menu'
+                                    'theme_location' =>  'under_ground_comics_footer_menu'
                                 )
                             ); ?>
                         </div>

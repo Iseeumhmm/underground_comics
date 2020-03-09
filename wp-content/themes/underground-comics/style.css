@@ -350,7 +350,7 @@ h2 {
 }
 .marvel_logo {
   background: url("img/brand_logos/marvel-comics-logo.png");
-  background-size: cover;
+  background-size: contain !important;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 40px 40px;
