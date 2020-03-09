@@ -75,7 +75,7 @@ function underground_comics_customizer($wp_customize)
         'sec_cart',
         array(
             'title'         =>  'Remove Shopping Cart ',
-            'description'   =>  'Selecting this replaces the shopping cart with an email link'
+            'description'   =>  'De-selecting this replaces the shopping cart with an email link'
         )
     );
 
