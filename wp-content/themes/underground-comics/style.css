@@ -336,6 +336,53 @@ h2 {
   background: url("img/category_images/dark-horse-category-banner.jpg");
   background-size: cover;
 }
+._assorted {
+  background: url("img/category_images/assorted-collectibles-category-banner.jpg");
+  background-size: cover;
+}
+
+.dc_logo {
+  background: url("img/brand_logos/dc-comics-logo.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+}
+.marvel_logo {
+  background: url("img/brand_logos/marvel-comics-logo.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+}
+.valiant_logo {
+  background: url("img/brand_logos/valiant-comics-logo.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+}
+.image_logo {
+  background: url("img/brand_logos/image-comics-logo.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+}
+.darkhorse_logo {
+  background: url("img/brand_logos/dark-horse-comics-logo.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+}
+.assorted_logo {
+  background: url("img/brand_logos/assorted-collectibles-page-logo.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+}
 
 @media (max-width: 767px) {
   .underground_comics-brands img {
@@ -415,7 +462,10 @@ h2 {
   list-style: none;
   padding-right: 1rem;
 }
-.category_page-menu li::after {
+#navbar-collapse-1 li {
+  margin: 0 10px;
+}
+/* .category_page-menu li::after {
   content: "|";
   display: inline-block;
   padding-left: 1rem;
@@ -425,7 +475,7 @@ h2 {
 }
 .category_page-menu li:last-child::after {
   content: "";
-}
+} */
 
 .tax-product_cat .woocommerce-products-header h1 {
   display: none;
@@ -436,6 +486,11 @@ h2 {
 .tax-product_cat .orderby,
 .tax-product_cat .woocommerce-result-count {
   display: none;
+}
+@media( max-width: 575px ) {
+  .category_page-icon {
+    height: 56vw;
+  }
 }
 /* Search Bar */
 
@@ -559,9 +614,6 @@ h2 {
   }
   .category_page-menu {
     height: auto;
-  }
-  .category_page-menu.d-flex {
-    display: block !important;
   }
   .navbar-toggler.ml-auto {
     margin-left: 0 !important;

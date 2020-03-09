@@ -67,8 +67,8 @@ if (is_product_category()) {
                 }
                 ?>
             </div>
-            <div class="category_page-menu col-md-9 col-12 d-flex align-items-start justify-content-end">
-                <nav class="main-menu navbar navbar-expand-lg" role="navigation">
+            <div class="category_page-menu col-md-9 col-12 d-flex align-items-start justify-content-md-start justify-content-center">
+                <nav class="main-menu navbar navbar-expand" role="navigation">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbar-collapse-1" aria-controls="navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
