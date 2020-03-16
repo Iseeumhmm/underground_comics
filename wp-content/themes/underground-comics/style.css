@@ -58,9 +58,12 @@ h2 {
   /* font-family: "Montserrat"; */
   letter-spacing: 2px;
 }
-.tax-product_cat h2, .single-product h2 {
-  font-family: "Montserrat";
+/* .tax-product_cat h2, .single-product h2 {
   letter-spacing: 2px;
+} */
+.woocommerce-loop-product__title {
+  font-family: "Montserrat";
+  font-size: var(--regular-size) !important;
 }
 
 /* Header - Main Menu */
