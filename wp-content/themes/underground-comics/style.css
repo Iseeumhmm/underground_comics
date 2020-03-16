@@ -54,7 +54,11 @@ a:hover {
   text-decoration: none;
 }
 h2 {
-  /* font-family: "Downcome"; */
+  font-family: "Downcome";
+  /* font-family: "Montserrat"; */
+  letter-spacing: 2px;
+}
+.tax-product_cat h2 {
   font-family: "Montserrat";
   letter-spacing: 2px;
 }
