@@ -58,7 +58,7 @@ h2 {
   /* font-family: "Montserrat"; */
   letter-spacing: 2px;
 }
-.tax-product_cat h2 {
+.tax-product_cat h2, .single-product h2 {
   font-family: "Montserrat";
   letter-spacing: 2px;
 }
