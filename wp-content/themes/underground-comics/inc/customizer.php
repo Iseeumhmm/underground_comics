@@ -38,6 +38,67 @@ function underground_comics_customizer($wp_customize)
             'type'          =>  'url'
         )
     );
+
+        /*--------------------- Featured Item Settings -----------------------*/
+
+        $wp_customize->add_section(
+            'sec_featured_item',
+            array(
+                'title'         =>  'Set Featured Item',
+                'description'   =>  'Add details below for featured item on home page.'
+            )
+        );
+        $wp_customize->add_setting(
+            'set_show_featured_item',
+            array(
+                'type'                  =>  'theme_mod',
+                'default'               =>  true,
+                'sanitize_callback'     => 'underground_comics_sanitize_checkbox'
+            )
+        );
+        $wp_customize->add_control(
+            'set_show_featured_item',
+            array(
+                'label'         =>  'Featured Item Title',
+                'description'   =>  'Enter title',
+                'section'       =>  'sec_featured_item',
+                'type'          =>  'checkbox'
+            )
+        );
+        $wp_customize->add_setting(
+            'set_featured',
+            array(
+                'type'                  =>  'theme_mod',
+                'default'               =>  true,
+                'sanitize_callback'     => 'absint'
+            )
+        );
+        $wp_customize->add_control(
+            'set_featured',
+            array(
+                'label'         =>  'Featured item product number',
+                'description'   =>  'Can be found by hovering over product in product list in admin',
+                'section'       =>  'sec_featured_item',
+                'type'          =>  'number'
+            )
+        );
+        $wp_customize->add_setting(
+            'set_featured_author',
+            array(
+                'type'                  =>  'theme_mod',
+                'default'               =>  true,
+                'sanitize_callback'     => 'wp_filter_nohtml_kses'
+            )
+        );
+        $wp_customize->add_control(
+            'set_featured_author',
+            array(
+                'label'         =>  'Show featured item Author',
+                'description'   =>  'Check for yes',
+                'section'       =>  'sec_featured_item',
+                'type'          =>  'text'
+            )
+        );
    
     /*--------------------- Footer Menu Settings -----------------------*/
 

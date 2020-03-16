@@ -849,6 +849,7 @@ button.wc-forward,
 .summary.entry-summary {
   min-height: 800px;
 }
+
 .summary.entry-summary {
   min-height: auto;
 }
@@ -862,6 +863,9 @@ button.wc-forward,
 .related.products .container-fluid {
   padding-left: 0 !important;
   padding-right: 0 !important;
+}
+.related.products .container-fluid .row, .shop-content .row {
+  width:100%;
 }
 
 /* Heading */

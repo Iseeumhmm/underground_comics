@@ -23,7 +23,7 @@ get_header();
                     <?php
                     $showdeal           = get_theme_mod('set_show_featured_item', 0);
                     $feature            = get_theme_mod('set_featured', 0);
-                    $featureAuthor            = get_theme_mod('set_featured_author', '');
+                    $featureAuthor      = get_theme_mod('set_featured_author', '');
                     $currency           = get_woocommerce_currency_symbol();
                     $regular            = get_post_meta($feature, '_regular_price', true);
                     $sale               = get_post_meta($feature, '_sale_price', true);
@@ -47,7 +47,7 @@ get_header();
                                             <h2>Featured</h2>
                                             <div class="summary entry-summary">
                                                 <a href="<?php echo get_permalink($feature); ?>">
-                                                    <h1 class="product_title entry-title"><?php echo get_the_title($feature); ?></h1>
+                                                    <h1 class="product_title entry-title"><?php echo get_the_title(115); ?></h1>
                                                 </a>
                                                 <h1 class="featured-author single_product-author">By: <?php echo $featureAuthor ?></h1>
 
