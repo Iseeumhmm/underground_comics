@@ -2,34 +2,36 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
 
   let isCart = document.querySelector('#cart-icon');
+
   if (!isCart) {
+
     // Set email subject for link when shopping cart is disabled
-
     let substituteCartLink = document.querySelector('#substitute-cart-link');
-    let productTitle = document.querySelector('.product_title');
-    if (substituteCartLink) {
-      subjectTitle = productTitle ? productTitle.innerHTML : "General Inquiry";
-      let mailtoWithSubject = substituteCartLink.href + "?subject=Regarding: " + subjectTitle;
-      substituteCartLink.setAttribute('href', mailtoWithSubject);
-    }
-    // Change featured add to cat button to link to product when cart is disabled
-
     let link = document.querySelector('.add-to-cart');
-    let addToCartSinglePage = document.querySelector('.single_add_to_cart_button.button');
 
-    if (link) {
-      let button = link.querySelector('button');
-      button.innerHTML = "More Info";
-    } else if (addToCartSinglePage) {
-      addToCartSinglePage.setAttribute('style', 'display: none;');
-    }
-    console.log('Cart disabled');
-    if (!substituteCartLink) {
+    if (substituteCartLink) {
+      let productTitle = document.querySelector('.product_title');
+      let mailtoWithSubject = ""
+      if (substituteCartLink) {
+        subjectTitle = productTitle ? productTitle.innerHTML : "General Inquiry";
+        mailtoWithSubject = substituteCartLink.value + "?subject=Regarding: " + subjectTitle;
+      }
+
+      // Change featured add to cat button to link to product when cart is disabled
+
+      let addToCartButton = document.querySelector('.single_add_to_cart_button.button');
+
+      addToCartButton.innerHTML = "Let's Make a Deal"
+      addToCartButton.type = "";
+      addToCartButton.addEventListener("click", function (event) {
+        event.preventDefault()
+        location.href = mailtoWithSubject;
+      });
+    } else {
       let linkToFeatured = document.querySelectorAll('.entry-summary a');
-      console.log('link: ', linkToFeatured[0].href);
+      link.querySelector('.featured-button').innerHTML = "More Info"
       link.setAttribute('href', linkToFeatured[0].href);
     }
-
   }
 })
 

@@ -47,14 +47,18 @@
                                         <a id="cart-icon" href="<?php echo wc_get_cart_url(); ?>"><span class="cart-icon"></span></a>
                                         <span class="items"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
                                     </div>
+
                                     <?php
                                 else :
-                                    if (is_front_page() != true) :
+                                    if (is_front_page() != true ) :
                                     ?>
-                                        <input type="hidden" id="substitute-cart-link" value="mailto:<?php echo $email; ?>"></input>
+                                        <div class="substitute_cart">
+                                            <a id="substitute-cart-link" href="mailto:<?php echo $email; ?>">Let's Make a Deal</a>
+                                        </div>
                                 <?php
                                     endif;
                                 endif;
+
                                 ?>
                                 <nav class="main-menu navbar navbar-expand-lg ml-3" role="navigation">
                                     <!-- Brand and toggle get grouped for better mobile display -->

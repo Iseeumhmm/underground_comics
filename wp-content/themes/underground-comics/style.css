@@ -630,6 +630,37 @@ h2 {
     margin-left: 0 !important;
   }
 }
+
+/* ---------------- Category - Pagination Styles ---------------- */
+
+.woocommerce nav.woocommerce-pagination ul {
+  /* padding-top: 0 !important; */
+  border: none;
+}
+.woocommerce nav.woocommerce-pagination ul li span {
+  padding: 0 !important;
+}
+.woocommerce nav.woocommerce-pagination ul li {
+  border: none !important;
+
+}
+.woocommerce nav.woocommerce-pagination ul li a {
+  padding: 0 !important;
+  color: var(--light-grey) !important;
+}
+.woocommerce nav.woocommerce-pagination ul li a.next {
+  padding: 0 !important;
+}
+.woocommerce nav.woocommerce-pagination ul li span.current, .woocommerce nav.woocommerce-pagination ul li a:hover {
+  color: var(--light-grey);
+  background: transparent;
+}
+.woocommerce nav.woocommerce-pagination .page-numbers {
+  padding: 0 12px 0 !important;
+}
+.woocommerce nav.woocommerce-pagination .page-numbers.current {
+  color: var(--blue);
+}
 /* ---------------- Footer - Footer Menu ---------------- */
 
 .ftr_container {
